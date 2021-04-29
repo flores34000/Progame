@@ -1,0 +1,129 @@
+@import "~bootstrap/scss/bootstrap";
+$color-red: rgb(255, 2, 2);
+$color-black: #191919;
+$color-white: #fff;
+
+p {
+  color: $color-white;
+}
+
+body {
+  width: 100%;
+  background-color: $color-black;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2em;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  color: $color-white;
+  margin: 30px auto;
+}
+a,
+a:visited {
+  text-decoration: none;
+  position: relative;
+  color: $color-white;
+
+  &:after {
+    content: "";
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background: $color-red;
+    transition: 0.2s;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+
+  &.block {
+    display: block;
+    padding: 0.5em;
+
+    &:hover {
+      background: rgb(238, 238, 238);
+    }
+  }
+}
+
+// header***************************************
+.hidden {
+  display: none;
+}
+h1 {
+  color: $color-red;
+  font-size: 3em;
+}
+header {
+  display: flex;
+  width: 100%;
+  margin: 50px auto;
+  .container-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    .search {
+      display: flex;
+      input {
+        // margin-right: 15px;
+        border-radius: 0%;
+        background-color: $color-black;
+        height: 90px;
+        width: 20rem;
+        font-size: 2em;
+      }
+      #btn {
+        border-radius: 0%;
+        color: $color-white;
+        border: 0.2px solid $color-white;
+        font-size: 2em;
+        &:hover {
+          background: rgb(65, 64, 64);
+        }
+      }
+    }
+  }
+}
+.header-para {
+  margin: 15px 30px;
+  font-size: 1.2em;
+}
+// page content***********************
+#pageContent {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+// cards****************************
+.card {
+  border-radius: 0%;
+  border: none;
+  background-color: $color-black;
+}
+h2 {
+  color: $color-white;
+  font-weight: 900;
+}
+
+h5 {
+  font-size: 2em;
+}
+// details************************
+h3 {
+  color: $color-white;
+  font-weight: 900;
+}
+.screenshot {
+  margin-top: 40px;
+}
+span {
+  font-weight: 900;
+}
+.list-red {
+  color: $color-red;
+}
